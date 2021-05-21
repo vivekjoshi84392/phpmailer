@@ -10,9 +10,10 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
   $Correo = new PHPMailer();
+  $Correo->SMTPDebug = SMTP::DEBUG_SERVER;
   $Correo->IsSMTP();
   $Correo->SMTPAuth = true;
-  $Correo->SMTPSecure = "tls";
+  $Correo->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
   $Correo->Host = "smtp.gmail.com";
   $Correo->Port = 587;
   $Correo->Username = "vivekjoshi84392@gmail.com";
