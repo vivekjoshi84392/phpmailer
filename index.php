@@ -10,7 +10,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
   $Correo = new PHPMailer();
-  $Correo->SMTPDebug = SMTP::DEBUG_SERVER;
+
   $Correo->IsSMTP();
   $Correo->SMTPAuth = true;
   $Correo->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
